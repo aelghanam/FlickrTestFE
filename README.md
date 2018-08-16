@@ -1,8 +1,8 @@
-# `angular-seed` — the seed for AngularJS apps
+## `Flickr Test` — the seed for AngularJS apps
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app.
+This project is a Flickr Test application made from a skeleton for a typical [AngularJS][angularjs] web app.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
+The seed that this application is made from is preconfigured to install the Angular
 framework and a bunch of development and testing tools for instant web development gratification.
 
 ### Install Dependencies
@@ -43,6 +43,10 @@ npm start
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
+## Make sure to have the Back-end project running also, as this project communicates with the JSON APIs exposed from the BE project
+
+https://github.com/aelghanam/FlickrTest
+
 
 ## Directory Layout
 
@@ -65,8 +69,8 @@ There are two kinds of tests in the `angular-seed` application: Unit tests and e
 
 ### Running Unit Tests
 
-The `angular-seed` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
-which we run with the [Karma][karma] test runner. We provide a Karma configuration file to run them.
+The app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
+which i run with the [Karma][karma] test runner. We provide a Karma configuration file to run them.
 
 * The configuration is found at `karma.conf.js`.
 
@@ -91,52 +95,6 @@ npm run test-single-run
 ```
 
 
-<a name="e2e-testing"></a>
-### Running End-to-End Tests
-
-The `angular-seed` app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
-are run with the [Protractor][protractor] End-to-End test runner. It uses native events and has
-special features for Angular applications.
-
-* The configuration is found at `e2e-tests/protractor-conf.js`.
-* The end-to-end tests are found in `e2e-tests/scenarios.js`.
-
-Protractor simulates interaction with our web app and verifies that the application responds
-correctly. Therefore, our web server needs to be serving up the application, so that Protractor can
-interact with it.
-
-**Before starting Protractor, open a separate terminal window and run:**
-
-```
-npm start
-```
-
-In addition, since Protractor is built upon WebDriver, we need to ensure that it is installed and
-up-to-date. The `angular-seed` project is configured to do this automatically before running the
-end-to-end tests, so you don't need to worry about it. If you want to manually update the WebDriver,
-you can run:
-
-```
-npm run update-webdriver
-```
-
-Once you have ensured that the development web server hosting our application is up and running, you
-can run the end-to-end tests using the supplied npm script:
-
-```
-npm run protractor
-```
-
-This script will execute the end-to-end tests against the application being hosted on the
-development server.
-
-**Note:**
-Under the hood, Protractor uses the [Selenium Standalone Server][selenium], which in turn requires
-the [Java Development Kit (JDK)][jdk] to be installed on your local machine. Check this by running
-`java -version` from the command line.
-
-If JDK is not already installed, you can download it [here][jdk-download].
-
 
 ## Updating Angular
 
@@ -155,7 +113,7 @@ respectively.
 
 ## Loading Angular Asynchronously
 
-The `angular-seed` project supports loading the framework and application scripts asynchronously.
+The project supports loading the framework and application scripts asynchronously.
 The special `index-async.html` is designed to support this style of loading. For it to work you must
 inject a piece of Angular JavaScript into the HTML page. The project has a predefined script to help
 do this:
@@ -178,7 +136,7 @@ etc to function properly when an HTML page is opened via the `file://` scheme in
 
 ### Running the App during Development
 
-The `angular-seed` project comes preconfigured with a local development web server. It is a Node.js
+The project comes preconfigured with a local development web server. It is a Node.js
 tool called [http-server][http-server]. You can start this web server with `npm start`, but you may
 choose to install the tool globally:
 
@@ -195,20 +153,9 @@ http-server -a localhost -p 8000
 Alternatively, you can choose to configure your own web server, such as Apache or Nginx. Just
 configure your server to serve the files under the `app/` directory.
 
-### Running the App in Production
+### Since this application communicates with another Back-end project, please make sure if testing this app and the BE on the same machine to run CHROME with this "--disable-web-security" parameter added to the TARGET, to enable requests from and to different targets (Cross site scripting)
 
-This really depends on how complex your app is and the overall infrastructure of your system, but
-the general rule is that all you need in production are the files under the `app/` directory.
-Everything else should be omitted.
-
-Angular apps are really just a bunch of static HTML, CSS and JavaScript files that need to be hosted
-somewhere they can be accessed by browsers.
-
-If your Angular app is talking to the backend server via XHR or other means, you need to figure out
-what is the best way to host the static files to comply with the same origin policy if applicable.
-Usually this is done by hosting the files by the backend server or through reverse-proxying the
-backend server(s) and web server(s).
-
+Backend Project https://github.com/aelghanam/FlickrTest
 
 ## Contact
 
